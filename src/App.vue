@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import MainTabBar from 'components/MainTabBar'
+import MainTabBar from 'components/content/MainTabBar'
 export default {
   components: {
     MainTabBar
@@ -18,6 +18,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import 'assets/css/reset'
+<style lang='scss'>
+@import 'assets/styles/base'
 </style>

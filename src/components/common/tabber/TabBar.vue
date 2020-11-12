@@ -21,6 +21,6 @@ export default {
   left: 0;
   right: 0;
   background-color: #f1f1f0;
-  box-shadow: 0 -2px 1px rgba(204, 204, 204, 0.3);
+  box-shadow: 0 -2px 3px rgba(180, 180, 180, .2);
 }
 </style>

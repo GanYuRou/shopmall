@@ -50,8 +50,8 @@
 </template>
 
 <script>
-import TabBar from 'components/tabber/TabBar'
-import TabBarItem from 'components/tabber/TabBarItem'
+import TabBar from 'components/common/tabber/TabBar'
+import TabBarItem from 'components/common/tabber/TabBarItem'
 
 export default {
   components: {

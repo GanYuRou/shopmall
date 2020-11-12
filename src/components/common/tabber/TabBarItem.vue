@@ -49,11 +49,11 @@ export default {
   flex: 1;
   height: 49px;
   text-align: center;
-  font-size: 14px;
+  font-size: 12px;
   cursor: default;
   img {
-    width: 22px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     margin: 3px 0;
   }
 }

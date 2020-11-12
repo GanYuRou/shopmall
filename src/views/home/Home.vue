@@ -1,29 +1,34 @@
 <template>
-  <div>
-    <div>
-      {{$store.state.a.count}}
-    </div>
-    <button @click="addition">+</button>
-    <button @click="subtraction">-</button>
+  <div class="nav">
+    <nav-bar>
+      <template v-slot:center>
+        <div>购物街</div>
+      </template>
+    </nav-bar>
   </div>
 </template>
 
 <script>
+import NavBar from 'components/common/navbar/NavBar'
+
 export default {
   data () {
     return {
     };
   },
   methods: {
-    addition() {
-      this.$store.commit("increment")
-    },
-    subtraction() {
-      this.$store.commit("decrement")
-    }
+    
+  },
+  components: {
+    NavBar
   }
 }
 </script>
 
 <style lang='scss' scoped>
+.nav {
+  background-color: $color-tint;
+  color: $color-background;
+  font-size: 16px;
+}
 </style>
