@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-export function instance (config) {
+export function request (config) {
+
   const instance = axios.create({
     baseURL: 'http://152.136.185.210:8000/api/w6',
   });
@@ -14,7 +15,6 @@ export function instance (config) {
 
   //拦截响应
   instance.interceptors.response.use(res => {
-
     return res.data;
   }, err => {
     

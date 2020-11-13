@@ -25,7 +25,7 @@ export default {
 <style lang='scss' scoped>
 .nav {
   background-color: $color-tint;
-  color: $color-background;
+  color: $white;
   font-size: 16px;
 }
 </style>

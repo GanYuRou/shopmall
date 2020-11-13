@@ -5,17 +5,18 @@
 </template>
 
 <script>
-export default {
-
-}
+	export default {
+		name: "Slide"
+	}
 </script>
 
-<style lang='scss' scoped>
-.slider{
-  width: 100%;
-  flex-shrink: 0;
-  img{
+<style>
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  .slide img {
     width: 100%;
   }
-}
 </style>
