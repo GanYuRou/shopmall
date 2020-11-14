@@ -31,7 +31,7 @@ export default {
   display: flex;
   justify-content: space-between;
   text-align: center;
-  padding: 15px 0 45px;
+  padding: 20px 0 30px;
   border-bottom: 5px solid #eee;
   font-size: $small-font-size;
   width: 100%;

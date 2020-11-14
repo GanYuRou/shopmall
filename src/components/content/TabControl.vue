@@ -25,6 +25,8 @@ export default {
   methods: {
     swift(index) {
       this.currentIndex = index;
+      // 向父组件传递点击的下标，因此来切换标题
+      this.$emit("transfer", index);
     }
   }
 }
