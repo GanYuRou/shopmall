@@ -146,7 +146,6 @@ export default {
       for (let i = 0; i < this.titlesTopY.length - 1; i++) {
           if (i !== this.currentIndex) {
             if (vertical >= this.titlesTopY[i] && vertical < this.titlesTopY[i + 1]) {
-              console.log(i);
               this.$refs.navtitle && (this.$refs.navtitle.currentIndex = i);
               this.currentIndex = i;
             }
@@ -177,7 +176,6 @@ export default {
   height: 100vh;
   .included {
     position: relative;
-    // z-index: 7;
     background-color: $white;
     height: calc(100% - 93px);
     overflow: hidden;

@@ -4,5 +4,8 @@ export default {
   },
   allCount(state) {
     return state.productList.length;
+  },
+  total(state) {
+    return state.totalPrice.toFixed(2);
   }
 }

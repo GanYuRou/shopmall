@@ -1,9 +1,16 @@
 <template>
-  <div class="good-item" v-if="Object.keys(good).length !== 0">
-    <img :src="showImg" :alt="good.title" @load="imageLoaded" @click="enterDetail">
+  <div class="good-item">
+    <img
+      :src="showImg"
+      :alt="good.title"
+      @load="imageLoaded"
+      @click="enterDetail"
+    />
     <div class="description">
       <p class="good_title">{{ good.title }}</p>
-      <span class="price">价格：<span class="price-digit">{{good.price}}</span></span>
+      <span class="price"
+        >价格：<span class="price-digit">{{ good.price }}</span></span
+      >
     </div>
   </div>
 </template>
@@ -23,29 +30,32 @@ export default {
   },
   computed: {
     showImg() {
-      return this.good.image || this.good.show.img;
-    }
+      return this.good.img || this.good.image || this.good.show.img;
+    },
   },
   methods: {
     imageLoaded() {
       // 图片加载完成一次就触发refresh
-      if(this.$route.name === "detail") {
+      if (this.$route.name === "detail") {
         this.$bus.$emit("detailRecommends");
       }
-      if(this.$route.name === "home") {
+      if (this.$route.name === "home") {
         this.$bus.$emit("homeExhibition");
+      }
+      if (this.$route.name === "category") {
+        this.$bus.$emit("categoryExhibition");
       }
     },
     enterDetail() {
       this.$router.push({
-        path: '/detail/',
-        name: 'detail',
+        path: "/detail/",
+        name: "detail",
         params: {
-          iid: this.good.iid
-        }
-      })
-    }
-  }
+          iid: this.good.iid,
+        },
+      });
+    },
+  },
 };
 </script>
 

@@ -20,6 +20,7 @@ const routes = [
   },
   {
     path: '/category',
+    name: 'category',
     component: Category
   },
   {

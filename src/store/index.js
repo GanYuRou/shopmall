@@ -8,7 +8,8 @@ import getters from './getters'
 Vue.use(Vuex);
 
 const state = {
-  productList: []
+  productList: [],
+  totalPrice: 0,
 }
 
 export default new Vuex.Store({
