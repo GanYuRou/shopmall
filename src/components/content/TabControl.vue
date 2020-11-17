@@ -1,5 +1,5 @@
 <template>
-  <div class="tab-control">
+  <div class="tab-control" v-if="Object.keys(titles).length !== 0">
     <div v-for="(item, index) in titles" 
          :key="item" @click="swift(index)" :class="{active: index === currentIndex}">
       <span>{{item}}</span>

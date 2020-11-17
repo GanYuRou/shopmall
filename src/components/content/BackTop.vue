@@ -18,6 +18,7 @@ export default {
   position: fixed;
   bottom: 64px;
   right: 26px;
+  z-index: 8;
   img {
     width: 42px;
     height: 42px;

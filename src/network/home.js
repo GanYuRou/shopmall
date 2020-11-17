@@ -1,4 +1,4 @@
-import {request} from 'network/request.js'
+import {request} from './request.js'
 
 export function getHomeMessage() {
   return request({

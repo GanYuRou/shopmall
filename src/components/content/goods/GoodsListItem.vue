@@ -1,6 +1,6 @@
 <template>
-  <div class="good-item" v-if="good.show">
-    <img :src="good.show.img" :alt="good.title" @load="imageLoaded">
+  <div class="good-item" v-if="Object.keys(good).length !== 0">
+    <img :src="showImg" :alt="good.title" @load="imageLoaded" @click="enterDetail">
     <div class="description">
       <p class="good_title">{{ good.title }}</p>
       <span class="price">价格：<span class="price-digit">{{good.price}}</span></span>
@@ -21,10 +21,29 @@ export default {
       },
     },
   },
+  computed: {
+    showImg() {
+      return this.good.image || this.good.show.img;
+    }
+  },
   methods: {
     imageLoaded() {
       // 图片加载完成一次就触发refresh
-      this.$bus.$emit("itemImageLoaded");
+      if(this.$route.name === "detail") {
+        this.$bus.$emit("detailRecommends");
+      }
+      if(this.$route.name === "home") {
+        this.$bus.$emit("homeExhibition");
+      }
+    },
+    enterDetail() {
+      this.$router.push({
+        path: '/detail/',
+        name: 'detail',
+        params: {
+          iid: this.good.iid
+        }
+      })
     }
   }
 };

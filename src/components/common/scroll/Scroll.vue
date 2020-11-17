@@ -38,7 +38,7 @@ export default {
     // 返回顶部图片是否显示
     if(this.probeType == 2 || this.probeType == 3) {
       this.scroll.on('scroll', (position) => {
-      this.$emit("invisible", position.y);
+      this.$emit("scrolling", position.y);
     })
     }
     // 下拉刷新的业务
